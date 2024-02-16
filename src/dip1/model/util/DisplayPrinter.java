@@ -5,11 +5,11 @@ import dip1.model.ReportItem;
 
 import java.util.Collection;
 
-public class ReportPrinter implements Printer {
+public class DisplayPrinter implements Printer {
     public void output(Collection<ReportItem> items) {
-        System.out.println("Output to printer");
+        System.err.println("Output to display");
         for (ReportItem item : items) {
-            System.out.format("printer %s - %f \n\r", item.getDescription(), item.getAmount());
+            System.out.format("DISPLAY %s - %f \n\r", item.getDescription(), item.getAmount());
         }
     }
 }
